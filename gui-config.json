@@ -1,0 +1,13 @@
+{
+    "configs": [
+        {
+            "method": "aes-256-cfb",
+            "password": "jd2015",
+            "remarks": "shadowsocks",
+            "server": "45.77.10.40",
+            "server_port": 10086
+        }
+    ],
+    "localPort": 1080,
+    "shareOverLan": false
+}
