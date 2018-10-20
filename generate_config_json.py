@@ -9,7 +9,7 @@ with open('data.json') as f:
         port = account['port']
         password = account['password']
         encrypt = account['encrypt']
-        item = "{ \"method\": \"" + encrypt + "\", \"password\": \"" + password + "\", \"remarks\": \"shadowsocks\", \"server\": \"" + ip + "\", \"server_port\": \"" + port + "\" },"
+        item = "{ \"method\": \"" + encrypt + "\", \"password\": \"" + password + "\", \"remarks\": \"" + ip + "\", \"server\": \"" + ip + "\", \"server_port\": \"" + port + "\" },"
         # print(item)
         result = result + item
     result += "],\"localPort\": 1080, \"shareOverLan\": false }"

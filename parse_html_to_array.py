@@ -15,14 +15,14 @@ with open("html") as html:
             encrypts = item(text=re.compile("Method*"))
             entrys = item.findAll("h4")
             if len(ips) > 0 and len(ports) > 0 and len(passwords) > 0 and len(encrypts) > 0 and len(entrys) >= 5:
-                ip = ips[0].text
-                port = ports[0].text
-                password = passwords[0].text
-                encrypt = encrypts[0]
+                ip = ips[0].text.strip(' \t\n\r')
+                port = ports[0].text.strip(' \t\n\r')
+                password = passwords[0].text.strip(' \t\n\r')
+                encrypt = encrypts[0].strip(' \t\n\r')
                 account = {}
                 account['ip'] = ip
                 account['port'] = port
                 account['password'] = password
-                account['encrypt'] = encrypt
+                account['encrypt'] = encrypt.replace("Method:", "")
                 accounts.append(account)
-    print '' + json.dumps(accounts)
+    print json.dumps(accounts)
