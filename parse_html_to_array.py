@@ -25,4 +25,5 @@ with open("html") as html:
                 account['password'] = password
                 account['encrypt'] = encrypt.replace("Method:", "")
                 accounts.append(account)
-    print json.dumps(accounts)
+    if len(accounts) > 0:
+        print json.dumps(accounts)
