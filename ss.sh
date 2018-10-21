@@ -13,3 +13,5 @@ defaults import com.qiuyuzhou.ShadowsocksX-NG gui-config.plist
 osascript -e 'quit app "ShadowsocksX-NG"'
 sleep 1
 open -a shadowsocksx-ng
+sleep 1
+osascript -e 'display notification "更新了 ss 账号"'
