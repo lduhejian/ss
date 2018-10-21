@@ -11,4 +11,5 @@ defaults import com.qiuyuzhou.ShadowsocksX-NG gui-config.plist
 
 # 重启 ShadowsocksX-NG
 osascript -e 'quit app "ShadowsocksX-NG"'
+sleep 1
 open -a shadowsocksx-ng
