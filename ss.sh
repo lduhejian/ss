@@ -5,13 +5,18 @@ curl -x socks5h://localhost:1080 "https://do.ishadowx.net/" -H 'User-Agent: Mozi
 /usr/local/bin/python parse_html_to_array.py > data.json
 /usr/local/bin/python generate_config_json.py > gui-config.json
 
-# 将服务器配置列表导入 ShadowsocksX-NG
-# plutil -convert xml1 gui-config.json -o gui-config.plist
-# defaults import com.qiuyuzhou.ShadowsocksX-NG gui-config.plist
+if [ -s data.json ]
+then
+    # 将服务器配置列表导入 ShadowsocksX-NG
+    plutil -convert xml1 gui-config.json -o gui-config.plist
+    defaults import com.qiuyuzhou.ShadowsocksX-NG gui-config.plist
 
-# 重启 ShadowsocksX-NG
-# osascript -e 'quit app "ShadowsocksX-NG"'
-# sleep 1
-# open -a shadowsocksx-ng
-# sleep 1
-osascript -e 'display notification "更新了 ss 账号"'
+    重启 ShadowsocksX-NG
+    osascript -e 'quit app "ShadowsocksX-NG"'
+    sleep 1
+    open -a shadowsocksx-ng
+    sleep 1
+    osascript -e 'display notification "更新了 ss 账号"'
+else
+    osascript -e 'display notification "获取账号失败"'
+fi
