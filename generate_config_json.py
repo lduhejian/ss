@@ -3,7 +3,6 @@ import uuid
 
 with open('data.json') as f:
     accounts = json.load(f)
-
     result = "{\"LaunchAtLogin\": false,\"ShadowsocksRunningMode\": \"auto\",\"ServerProfiles\": ["
     ActiveServerProfileId = ""
     for account in accounts:
