@@ -1,3 +1,4 @@
-data.json
-gui-config.json
-gui-config.plist
+html
+*.json
+*.plist
+*.log
