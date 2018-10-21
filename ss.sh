@@ -6,7 +6,7 @@ python parse_html_to_array.py > data.json
 python generate_config_json.py > gui-config.json
 
 # 将服务器配置列表导入 ShadowsocksX-NG
-plutil -convert xml1 config.json -o gui-config.plist
+plutil -convert xml1 gui-config.json -o gui-config.plist
 defaults import com.qiuyuzhou.ShadowsocksX-NG gui-config.plist
 
 # 重启 ShadowsocksX-NG
