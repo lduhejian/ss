@@ -11,7 +11,7 @@ then
     plutil -convert xml1 gui-config.json -o gui-config.plist
     defaults import com.qiuyuzhou.ShadowsocksX-NG gui-config.plist
 
-    重启 ShadowsocksX-NG
+    # 重启 ShadowsocksX-NG
     osascript -e 'quit app "ShadowsocksX-NG"'
     sleep 1
     open -a shadowsocksx-ng
